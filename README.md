@@ -1,0 +1,1 @@
+Javascript adaptation of library from [LAFF course](https://www.edx.org/course/linear-algebra-foundations-to-frontiers) (instead of MATLAB)
