@@ -1,4 +1,4 @@
-const { describe, test, expect, beforeEach } = require('@jest/globals')
+const { test, expect, beforeEach } = require('@jest/globals')
 
 const Vector = require('./vector.js')
 

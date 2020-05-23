@@ -6,14 +6,12 @@ const { copy, scal, axpy, dot, norm2 } = require('./index.js')
  */
 class Vector {
   constructor (elements = []) {
+    /**
+     * Elements of vector
+     * @type {Array<Number>}
+     */
     this.elements = copy(elements)
   }
-
-  /**
-   * Elements of vector
-   * @type {Array<Number>}
-   */
-  elements
 
   /**
    * Size of vector
@@ -79,7 +77,6 @@ class Vector {
   norm2 () {
     return norm2(this.elements)
   }
-
 }
 
 /**

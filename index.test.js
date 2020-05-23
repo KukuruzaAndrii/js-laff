@@ -1,6 +1,6 @@
-const { describe, test, expect } = require('@jest/globals')
+const { test, expect } = require('@jest/globals')
 
-const { copy, scal, axpy, dot, norm2 } = require('./index.js')
+const { copy, scal, axpy, dot, norm2, dotFlame, axpyFlame } = require('./index.js')
 
 const empty = []
 const a = [1, 2, 3, 4, 5]
@@ -35,4 +35,16 @@ test('norm2', () => {
   expect(norm2(a)).toBeCloseTo(7.416198487, 9)
   expect(norm2(b)).toBeCloseTo(2.236067977, 9)
   expect(norm2(big1)).toBeCloseTo(Math.sqrt(dot(big1, big1)), 9)
+})
+
+test('dotFlame', () => {
+  expect(() => dotFlame(empty, a)).toThrow()
+  expect(dotFlame(empty, empty)).toBe(0)
+  expect(dotFlame(a, b)).toBe(15)
+  expect(dotFlame(big1, big2)).toBe(36937711400)
+})
+
+test('axpyFlame', () => {
+  expect(() => axpyFlame(3, empty, a)).toThrow()
+  expect(axpyFlame(3, a, b)).toEqual([4, 7, 10, 13, 16])
 })
