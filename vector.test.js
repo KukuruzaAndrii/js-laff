@@ -20,12 +20,12 @@ test('size', () => {
   expect(b.size()).toEqual(4)
 })
 
-test('copy', () => {
-  expect(() => empty.copy(a)).toThrow()
-  expect(() => a.copy(b)).toThrow()
-  expect(a.copy(new Vector([1, 1, 1, 1, 1]))).toEqual(new Vector([1, 1, 1, 1, 1]))
-  expect(a.copy(c)).toEqual(c)
-})
+// test('copy', () => {
+//   expect(() => empty.copy(a)).toThrow()
+//   expect(() => a.copy(b)).toThrow()
+//   expect(a.copy(new Vector([1, 1, 1, 1, 1]))).toEqual(new Vector([1, 1, 1, 1, 1]))
+//   expect(a.copy(c)).toEqual(c)
+// })
 
 test('scal', () => {
   expect(empty.scal(3)).toEqual(empty)

@@ -10,7 +10,7 @@ class Vector {
      * Elements of vector
      * @type {Array<Number>}
      */
-    this.elements = copy(elements)
+    this.elements = elements
   }
 
   /**
